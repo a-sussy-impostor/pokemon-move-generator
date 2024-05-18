@@ -1,3 +1,12 @@
+from os import system as sys
+if os.getenv("GITHUB_ACTIONS") == "true":
+  sys("pip install gradio")
+  sys("pip install transformers")
+  sys("pip install utils")
+  sys("pip install pandas")
+  sys("pip install tensorflow")
+  sys("pip install json")
+
 import gradio as gr
 from transformers import AutoTokenizer
 from transformers import pipeline
